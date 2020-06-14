@@ -1,0 +1,58 @@
+body {
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.material-icons {
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: middle;
+  margin: -3px;
+  padding-bottom: 1px;
+}
+
+#notebook>* {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+}
+.side-bar{
+  background: #f8f8f8;
+  width: 20%;
+  box-sizing: border-box;
+}
+.toolbar{
+  width: 200px;
+  height: 40px;
+  color: skyblue;
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+button,
+.notes.selected {
+  background: #40b883;
+  color: white;
+}
+button:hover {
+  background: #63c89b;
+}
+.notes{
+  height:40px;
+  line-height: 40px;
+}
+.notes{
+  height:40px;
+  line-height: 40px;
+}

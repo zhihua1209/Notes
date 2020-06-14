@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/marked"></script>
+  <script src="https://unpkg.com/moment"></script>
+
+  <!-- note -->
+  <div id="notebook">
+    <aside class="side-bar">
+      <!-- 笔记列表 -->
+
+      <!-- 工具蓝 -->
+      <div class="toolbar">
+        <button :title="addButtonTitle" @click='addNote'><i class="material-icons">add</i> Add Note</button>
+      </div>
+      <div class="notes" v-for='note of notes' @click='selectNote(note)' :class='{selected:note===selectedNote}'>
+        {{note.title}}
+      </div>
+    </aside>
+    <!-- 主面板 -->
+    <template v-if='selectedNote'>
+      <section class="main">
+        <textarea v-model='selectedNote.content'></textarea>
+      </section>
+      <aside class="preview" v-html='notePreview'>
+        
+      </aside>
+    </template>
+  </div>
+  
+
+
+
+  <script src="style.js"></script>
+</body>
+
+</html>
